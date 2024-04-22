@@ -1,4 +1,4 @@
-package application.login;
+package application.view;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;

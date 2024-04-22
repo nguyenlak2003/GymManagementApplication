@@ -1,9 +1,9 @@
-application\login\MyPasswordField.class
-application\login\Button.class
-application\login\Button$1.class
-application\login\PanelLogin.class
-application\login\loginView.class
-application\login\loginView$1.class
+application\view\loginView$1.class
+application\swing\Button.class
+application\swing\Button$1.class
+application\swing\MyPasswordField.class
+application\view\PanelLogin.class
+application\swing\Button$2.class
 com\mycompany\gymmanagerapplication\GymManagerApplication.class
-application\login\MyTextField.class
-application\login\Button$2.class
+application\swing\MyTextField.class
+application\view\loginView.class
