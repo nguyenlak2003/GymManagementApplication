@@ -22,6 +22,7 @@ public class loginView extends JFrame {
         
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        setResizable(false);
         setLayout(null);
         
         background.setIcon(new ImageIcon("src/main/java/application/image/background.jpg"));
@@ -39,7 +40,6 @@ public class loginView extends JFrame {
             public void run() {
                 setLockAndFeel();
                 new loginView().setVisible(true);   
-                System.out.println("bbbbb");
             }
 
             private void setLockAndFeel() {
