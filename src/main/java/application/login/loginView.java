@@ -39,6 +39,7 @@ public class loginView extends JFrame {
             public void run() {
                 setLockAndFeel();
                 new loginView().setVisible(true);
+                System.out.println("aaa");
             }
 
             private void setLockAndFeel() {
