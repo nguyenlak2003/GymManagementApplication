@@ -1,5 +1,7 @@
-package application.login;
+package application.view;
 
+import application.swing.MyPasswordField;
+import application.swing.MyTextField;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;

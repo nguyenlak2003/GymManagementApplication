@@ -1,4 +1,4 @@
-package application.login;
+package application.view;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -22,6 +22,7 @@ public class loginView extends JFrame {
         
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        setResizable(false);
         setLayout(null);
         
         background.setIcon(new ImageIcon("src/main/java/application/image/background.jpg"));
@@ -41,6 +42,8 @@ public class loginView extends JFrame {
                 new loginView().setVisible(true);
                 System.out.println("aaa");
                 System.out.println("bbbb");
+
+                new loginView().setVisible(true);   
             }
 
             private void setLockAndFeel() {
