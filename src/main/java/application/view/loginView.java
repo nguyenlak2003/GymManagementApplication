@@ -38,7 +38,8 @@ public class loginView extends JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 setLockAndFeel();
-                new loginView().setVisible(true);
+                new loginView().setVisible(true);   
+                System.out.println("aaa");
             }
 
             private void setLockAndFeel() {
