@@ -4,10 +4,12 @@ application\swing\MyPasswordField.class
 application\swing\Button$2.class
 com\mycompany\gymmanagerapplication\GymManagerApplication.class
 application\swing\MyTextField.class
-application\view\loginView.class
-application\view\loginView$1.class
 application\swing\Button.class
 application\entity\User.class
+application\view\LoginView$1.class
+application\controller\LoginController$LoginListener.class
 application\controller\LoginController.class
+application\view\LoginView.class
 application\view\PanelLogin.class
+application\App$1.class
 application\App.class
