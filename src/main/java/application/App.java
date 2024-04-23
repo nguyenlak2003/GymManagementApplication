@@ -15,6 +15,7 @@ public class App {
             public void run() {
                 setLockAndFeel();
                 new LoginController(new LoginView());
+                System.out.println("aaa");
             }
 
             private void setLockAndFeel() {
