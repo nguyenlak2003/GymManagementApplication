@@ -8,6 +8,7 @@ application\swing\Button.class
 application\entity\User.class
 application\view\LoginView$1.class
 application\controller\LoginController$LoginListener.class
+application\view\DashboardView.class
 application\controller\LoginController.class
 application\view\LoginView.class
 application\view\PanelLogin.class
