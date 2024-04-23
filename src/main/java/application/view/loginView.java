@@ -1,8 +1,5 @@
 package application.view;
 
-import application.entity.User;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -11,9 +8,9 @@ import javax.swing.JLabel;
  *
  * @author Lăk
  */
-public class LoginView extends JFrame {
+public class loginView extends JFrame {
 
-    public LoginView() {
+    public loginView() {
         initComponents();
         //setBackground(new Color(0, 0, 0, 0));
     }
@@ -28,8 +25,7 @@ public class LoginView extends JFrame {
         setResizable(false);
         setLayout(null);
         
-        background.setIcon(new ImageIcon(getClass().getResource("/image/background.jpg")));
-        
+        background.setIcon(new ImageIcon("src/main/java/application/image/background.jpg"));
         background.setBounds(0, 0, 1280, 720);
         
         add(panelLogin);
@@ -43,7 +39,7 @@ public class LoginView extends JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 setLockAndFeel();
-                new LoginView().setVisible(true);   
+                new loginView().setVisible(true);   
             }
 
             private void setLockAndFeel() {
@@ -55,13 +51,13 @@ public class LoginView extends JFrame {
                         }
                     }
                 } catch (ClassNotFoundException ex) {
-                    java.util.logging.Logger.getLogger(LoginView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(loginView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 } catch (InstantiationException ex) {
-                    java.util.logging.Logger.getLogger(LoginView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(loginView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 } catch (IllegalAccessException ex) {
-                    java.util.logging.Logger.getLogger(LoginView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(loginView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-                    java.util.logging.Logger.getLogger(LoginView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(loginView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
             }
         });
@@ -70,11 +66,4 @@ public class LoginView extends JFrame {
     private JLabel background;
     private PanelLogin panelLogin;
     
-    public User getUser(){
-        return panelLogin.getUser();
-    }
-    
-    public void addLoginListener(ActionListener listener){
-        panelLogin.addActionListener(listener);
-    }
 }
