@@ -1,7 +1,6 @@
 package application.view;
 
 import application.entity.User;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
