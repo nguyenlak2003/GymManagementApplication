@@ -14,3 +14,4 @@ application\view\LoginView.class
 application\view\PanelLogin.class
 application\App$1.class
 application\App.class
+application\swing\PanelBoder.class
