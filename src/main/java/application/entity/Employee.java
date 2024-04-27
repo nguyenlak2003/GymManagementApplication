@@ -2,14 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package application.swing;
+package application.entity;
 
 /**
  *
- * @author Admin
+ * @author Le Van Phong Tu
  */
-public class DyluuTest {
-    public static void main(String[] args) {
-        System.out.println("dyluuuuuuuu");
-    }
+public class Employee {
+    
 }
