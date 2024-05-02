@@ -23,27 +23,38 @@ public class GymerMemberFunc {
     public GymerMemberFunc() {
         this.listGymMembers = readListGymMembers();
     }
-    public void writeListStudents(List<GymerMember> gymerMembers) {
+    
+    /* Lưu các object vào file .xml */
+    
+    public void writeListGymerMembers(List<GymerMember> gymerMembers) {
         GymerMemberXML gymerMemberXML = new GymerMemberXML();
         gymerMemberXML.setGymerMember(gymerMembers);
         FileUtils.writeXMLtoFile(GYMERMEMBER_FILE_NAME, gymerMemberXML);
     }
-
+    
+    /* Đọc các object từ file .xml */
+    
     private List<GymerMember> readListGymMembers() {
         List<GymerMember> list = new ArrayList<GymerMember>();
         GymerMemberXML gymerMemberXML = (GymerMemberXML) FileUtils.readXMLFile(
                 GYMERMEMBER_FILE_NAME, GymerMemberXML.class);
         if (gymerMemberXML != null) {
-            list = gymerMemberXML.getStudent();
+            list = gymerMemberXML.getGymerMember();
         }
         return list;
     }
+    
+    /* Thêm các object vào list và lưu list vào .xml */
+    
     public void add(GymerMember gymerMember ) {
-        int id = (listGymMembers.size() > 0) ? (listGymMembers.size() + 1) : 1;
+        int id = (!listGymMembers.isEmpty()) ? (listGymMembers.size() + 1) : 1;
         gymerMember.setId(id);
         listGymMembers.add(gymerMember);
-        writeListStudents(listGymMembers);
+        writeListGymerMembers(listGymMembers);
     }
+    
+    /* Cập nhật object và lưu vào .xml */
+    
     public void edit(GymerMember gymerMember) {
         int size = listGymMembers.size();
         for (int i = 0; i < size; i++) {
@@ -55,15 +66,18 @@ public class GymerMemberFunc {
                 listGymMembers.get(i).setEndDay(gymerMember.getEndDay());
                 listGymMembers.get(i).setdateOfBirth(gymerMember.getdateOfBirth());
                 listGymMembers.get(i).setPhoneNumber(gymerMember.getPhoneNumber());
-                writeListStudents(listGymMembers);
+                writeListGymerMembers(listGymMembers);
                 break;
             }
         }
     }
+    
+    /* Xóa object */
+    
     public boolean delete(GymerMember gymerMember) {
         boolean isFound = false;
-        int size = listGymMembers.size();
-        for (int i = 0; i < size; i++) {
+ 
+        for (int i = 0; i < listGymMembers.size(); i++) {
             if (listGymMembers.get(i).getId() == gymerMember.getId()) {
                 gymerMember = listGymMembers.get(i);
                 isFound = true;
@@ -72,11 +86,14 @@ public class GymerMemberFunc {
         }
         if (isFound) {
             listGymMembers.remove(gymerMember);
-            writeListStudents(listGymMembers);
+            writeListGymerMembers(listGymMembers);
             return true;
         }
         return false;
     }
+    
+    /* Sắp xếp tăng dần theo tên */
+    
     public void sortGymerMemberByName() {
         Collections.sort(listGymMembers, new Comparator<GymerMember>() {
             public int compare(GymerMember gymerMember1, GymerMember gymerMember2) {
