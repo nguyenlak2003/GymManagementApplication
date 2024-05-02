@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class GymerMemberXML {
     private List<GymerMember> gymerMember;
 
-    public List<GymerMember> getStudent() {
+    public List<GymerMember> getGymerMember() {
         return gymerMember;
     }
 
