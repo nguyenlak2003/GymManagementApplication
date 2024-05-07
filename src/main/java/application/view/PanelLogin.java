@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 
 
 /**
@@ -50,21 +51,21 @@ public class PanelLogin extends JPanel{
 
         labelLogin.setBounds(115, 145, 290, 100);
         labelLogin.setHorizontalAlignment(SwingConstants.CENTER);
-        labelLogin.setFont(new Font("Tw Cen MT Condensed Extra Bold", 0, 45));
+        labelLogin.setFont(new Font("SegoeUi Condensed Extra Bold", 0, 45));
 
-        textFieldUsername.setBounds(115, 250, 290, 50);
+        textFieldUsername.setBounds(115, 300, 300, 60);
         textFieldUsername.setHint("Username");
         textFieldUsername.setPrefixIcon(new ImageIcon(getClass().getResource("/image/user.png")));
 
-        textFieldPassword.setBounds(115, 310, 290, 50);
+        textFieldPassword.setBounds(115, 400, 300, 60);
         textFieldPassword.setHint("Password");
         textFieldPassword.setPrefixIcon(new ImageIcon(getClass().getResource("/image/padlock.png")));
 
-        buttonLogin.setBounds(210, 390, 100, 50);
+        buttonLogin.setBounds(190, 490, 150, 70);
         //buttonLogin.setFocusable(false);
         buttonLogin.setText("LOGIN");
         buttonLogin.setRolloverEnabled(false);
-        buttonLogin.setBackground(new Color(0, 0, 0));
+        buttonLogin.setBackground(new Color(100, 94, 94));
         buttonLogin.setForeground(new Color(230, 245, 241));
 
         add(labelLogo);
@@ -77,8 +78,8 @@ public class PanelLogin extends JPanel{
         add(buttonLogin);
 
         setLayout(null);
-        setBounds(90, 60, 520, 580);
-        setBackground(new Color(226, 229, 255, 50));
+        setBounds(0, 0, 540, 720);
+        setOpaque(false);
     }
    
     private MyTextField textFieldUsername;
@@ -100,6 +101,18 @@ public class PanelLogin extends JPanel{
     }
     
     public void addActionListener(ActionListener listen){
-        buttonLogin.addActionListener(listen);
+        buttonLogin.addActionListener(e -> openDashboardFrame());
     }
+    private void openDashboardFrame() {
+    LoginView loginView = (LoginView) SwingUtilities.getWindowAncestor(this);
+    loginView.getContentPane().removeAll();
+    loginView.getContentPane().add(new DashboardButton());
+    loginView.revalidate();
+    loginView.repaint();
 }
+
+    }
+        
+        
+    
+  

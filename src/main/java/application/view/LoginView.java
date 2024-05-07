@@ -27,7 +27,7 @@ public class LoginView extends JFrame {
         setResizable(false);
         setLayout(null);
         
-        background.setIcon(new ImageIcon(getClass().getResource("/image/background.jpg")));
+        background.setIcon(new ImageIcon(getClass().getResource("/image/background.png")));
         
         background.setBounds(0, 0, 1280, 720);
         
