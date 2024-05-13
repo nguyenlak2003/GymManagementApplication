@@ -96,22 +96,17 @@ public class PanelLogin extends JPanel{
     }
     
     public User getUser(){
+        System.out.println(textFieldUsername.getText() + "abc");
         return new User(textFieldUsername.getText(),
                         String.copyValueOf(textFieldPassword.getPassword()));
+        
     }
     
     public void addActionListener(ActionListener listen){
-        buttonLogin.addActionListener(e -> openDashboardFrame());
+        buttonLogin.addActionListener(listen);
     }
-    private void openDashboardFrame() {
-    LoginView loginView = (LoginView) SwingUtilities.getWindowAncestor(this);
-    loginView.getContentPane().removeAll();
-    loginView.getContentPane().add(new DashboardButton());
-    loginView.revalidate();
-    loginView.repaint();
-}
 
-    }
+}
         
         
     

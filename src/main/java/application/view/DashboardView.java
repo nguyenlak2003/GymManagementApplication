@@ -1,10 +1,13 @@
 
 package application.view;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Lăk
  */
-public class DashboardView {
+public class DashboardView extends JFrame{
+    
     
 }
