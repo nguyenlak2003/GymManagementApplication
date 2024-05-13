@@ -5,14 +5,16 @@ com\mycompany\gymmanagerapplication\GymManagerApplication.class
 application\entity\Employee.class
 application\func\GymerMemberFunc$1.class
 application\swing\Button.class
-application\view\LoginView$1.class
+application\view\NewJFrameh.class
 application\controller\LoginController$LoginListener.class
 application\func\GymerMemberFunc.class
+application\swing\RoundedCornerPanel.class
 application\controller\LoginController.class
 application\entity\GymerMember.class
 application\App$1.class
 application\swing\Button$2.class
 application\swing\MyTextField.class
+application\swing\RoundJTextField.class
 application\untils\FileUtils.class
 application\entity\Coach.class
 application\entity\User.class
@@ -20,5 +22,8 @@ application\view\DashboardView.class
 application\entity\GymerMemberXML.class
 application\view\LoginView.class
 application\view\PanelLogin.class
+application\swing\RenderingHints.class
+application\view\DashboardButton.class
 application\App.class
 application\swing\PanelBoder.class
+application\view\NewJFrameh$1.class
