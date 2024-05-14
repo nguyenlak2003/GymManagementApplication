@@ -1,5 +1,4 @@
 package application.view;
-import java.awt.geom.RoundRectangle2D;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -68,6 +67,5 @@ public class DashboardButton extends JPanel {
         innerFrame.setUndecorated(true);
         innerFrame.setShape(new RoundRectangle2D.Double(64,50,1152,1152,50,50));
         innerFrame.setVisible(true);*/
-        
     }
 }
