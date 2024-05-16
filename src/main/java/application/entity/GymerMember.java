@@ -16,99 +16,57 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "gymermembers")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class GymerMember implements Serializable{
-    private int id;
-    private String name, address, phoneNumber;
-    private Date dateOfBirth, startDay, endDay;
-    private Coach coach;
-    
-    
+public class GymerMember extends Person implements Serializable{
+    private String id;
+    private String startDay, endDay;
+    private String coach;
 
-    public GymerMember(int id, String name, String address, Date dateOfBirth,  String phoneNumber,Coach coach, Date startDay, Date endDay ) {
+    public GymerMember(String id, String name, String gender, String address, String phoneNumber, String dob, String startDay, String endDay, String coach) {
+        super(name, gender, address, phoneNumber, dob);
         this.id = id;
-        this.name = name;
-        this.address = address;
-        this.dateOfBirth = dateOfBirth;
-        
-        this.coach = coach;
-        this.phoneNumber = phoneNumber;
         this.startDay = startDay;
         this.endDay = endDay;
+        this.coach = coach;
     }
 
     public GymerMember() {
     }
 
-    public int getId() {
+    public String getid() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setid(String maGymer) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Date getdateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setdateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    } 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public Date getStartDay() {
+    public String getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(Date startDay) {
+    public void setStartDay(String startDay) {
         this.startDay = startDay;
     }
 
-    public Date getEndDay() {
+    public String getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(Date endDay) {
+    public void setEndDay(String endDay) {
         this.endDay = endDay;
     }
 
-    public Coach getCoach() {
+    public String getCoach() {
         return coach;
     }
 
-    public void setCoach(Coach coach) {
+    public void setCoach(String coach) {
         this.coach = coach;
     }
     
-    
 }
+    
+    
+    
+
+    

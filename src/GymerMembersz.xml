@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Gymers>
+   <gymer id="1">
+      <hoten>2</hoten>
+      <gioitinh>3</gioitinh>
+      <ngaysinh>6</ngaysinh>
+      <diachi>4</diachi>
+      <sdt>5</sdt>
+      <ngaybatdau>7</ngaybatdau>
+      <ngayketthuc>8</ngayketthuc>
+      <huanluyenvien>9</huanluyenvien>
+   </gymer>
+   <gymer id="6">
+      <hoten>9</hoten>
+      <gioitinh>3</gioitinh>
+      <ngaysinh>6</ngaysinh>
+      <diachi>4</diachi>
+      <sdt>5</sdt>
+      <ngaybatdau>7</ngaybatdau>
+      <ngayketthuc>8</ngayketthuc>
+      <huanluyenvien>9</huanluyenvien>
+   </gymer>
+</Gymers>
